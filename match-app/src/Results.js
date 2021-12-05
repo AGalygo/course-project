@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import ResultItem from "./ResultItem";
-// import "./CardItem.css"
 
 const styles = {
     ul: {
@@ -18,15 +17,15 @@ function Results() {
 
     return (
         <>
-        <Link to="/">Go to main page</Link>
-        <ul style={styles.ul}> 
-        {JSON.parse(localStorage.getItem('results')).map((result, index) => {
-            return <ResultItem result={result} 
-            key={result.id} 
-            index={index}/>
-        })}
-    </ul>
-    </>
+            <Link to="/">Go to main page</Link>
+            <ul style={styles.ul}>
+                {JSON.parse(localStorage.getItem('results')).map((result, index) => {
+                    return <ResultItem result={result}
+                        key={result.id}
+                        index={index} />
+                })}
+            </ul>
+        </>
     )
 }
 
