@@ -1,4 +1,3 @@
-import { useContext } from "react";
 import React from "react";
 
 const styles = {
@@ -17,16 +16,16 @@ const styles = {
 }
 
 function ResultItem({ result, index }) {
-    
+
     return <li style={styles.li}>
         <span>
-            <strong>{index+1}</strong>
+            <strong>{index + 1}</strong>
             &nbsp;
             <a style={styles.a}>{result.player}</a>
             <a style={styles.a}>{result.score}</a>
             <a style={styles.a}>{result.date}</a>
         </span>
-        </li>
+    </li>
 }
 
 export default ResultItem
